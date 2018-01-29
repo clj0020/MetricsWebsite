@@ -1,0 +1,60 @@
+<?php $thisPage="Blog"; ?>
+<?php $blog = $data['blog'] ?>
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><?= $blog->getTitle() ?></title>
+
+    <!--build:css css/main.min.css-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/nav.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <link rel="stylesheet" href="../css/blog-detail.css" type="text/css">
+    <!--endbuild-->
+
+    <!--build:js /js/main.min.js -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../bower_components/anchorme/src/anchorme.min.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+
+    <?php include("nav.phtml"); ?>
+
+    <section>
+      <div class="container-fluid">
+        <div class="row blog-image-row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <img src="<?= "../".$blog->getPictureUrl() ?>" >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 blog-content">
+            <h1 class="text-center"><?= $blog->getTitle() ?></h1>
+            <p><em>By <?= $blog->getUsername() ?></em> | <?= $blog->getDate() ?></p>
+            <p id="content">
+              <script>document.write(anchorme.js("<?= $blog->getContent() ?>"))</script>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <?php include("footer.phtml"); ?>
+</body>
+
+</HTML>

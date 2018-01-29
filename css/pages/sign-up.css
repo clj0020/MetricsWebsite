@@ -1,0 +1,93 @@
+@font-face {
+  font-family: HelveticaMedium;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-MdEx.otf") format("opentype"); }
+
+@font-face {
+  font-family: HelveticaBoldCondensed;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-BdCn.otf") format("opentype"); }
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px; }
+
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px; }
+
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px; }
+
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.gutter-30.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.gutter-30 > [class^="col-"], .gutter-30 > [class^=" col-"] {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+section {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  padding-right: 3.5em;
+  padding-left: 3.5em; }
+  section .container-fluid {
+    padding: 0; }
+  section h1 {
+    margin-bottom: 20px;
+    font-family: 'HelveticaMedium';
+    color: #484f5e;
+    font-size: 32px;
+    transform: scale(1, 1.2);
+    -webkit-transform: scale(1, 1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1, 1.2);
+    /* Firefox */
+    -ms-transform: scale(1, 1.2);
+    /* IE 9+ */
+    -o-transform: scale(1, 1.2);
+    /* Opera */ }
+  section p {
+    color: #5d5c5c;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px; }
+  section a:hover {
+    text-decoration: none; }
+  section .sign-up-pic {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em; }
+    section .sign-up-pic h1 {
+      color: white;
+      text-transform: uppercase;
+      font-family: 'HelveticaBoldCondensed'; }
+  section .group-fitness {
+    background: url("../img/sign-up-group-fitness.png") no-repeat center center;
+    background-size: cover; }
+  section .personal-training {
+    background: url("../img/sign-up-personal-training.png") no-repeat center center;
+    background-size: cover; }
+  section .free-class-sign-up {
+    background: #ffff00;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 2em; }
+    section .free-class-sign-up h1 {
+      color: black;
+      font-weight: 300;
+      margin: 0; }
+    section .free-class-sign-up h2 {
+      color: black;
+      font-weight: 300;
+      margin: 0; }
+  section img {
+    margin-bottom: 20px;
+    max-width: 400px; }

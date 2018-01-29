@@ -1,0 +1,89 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: $rightLeftMargin;
+  padding-left: $rightLeftMargin;
+
+  @include breakpoint(xs) {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @include breakpoint(xxs) {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  @include breakpoint(xxxs) {
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: $secondaryColor;
+    margin-bottom: 20px;
+    font-family: Helvetica;
+
+    @include breakpoint(xxs) {
+      font-size: 29px;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 26px;
+    }
+  }
+
+  h5 {
+    font-family: 'Helvetica';
+    font-size: 17px;
+    margin-bottom: 1em;
+    margin-top: 0.1em;
+  }
+
+  .content-container {
+    text-align: justify;
+  }
+
+  p {
+    color: $secondaryColor;
+    font-size: 17px;
+    padding: 0;
+
+
+    @include breakpoint(md) {
+      font-size: 13px;
+    }
+
+    @include breakpoint(xxs) {
+      font-size: 12px;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 12px;
+    }
+  }
+
+  .img-container {
+    margin-bottom: 1em;
+  }
+  img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+}

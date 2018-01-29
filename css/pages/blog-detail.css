@@ -1,0 +1,82 @@
+@font-face {
+  font-family: HelveticaMedium;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-MdEx.otf") format("opentype"); }
+
+@font-face {
+  font-family: HelveticaBoldCondensed;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-BdCn.otf") format("opentype"); }
+
+body {
+  font-family: 'HelveticaMedium', sans-serif; }
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px; }
+
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px; }
+
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px; }
+
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.gutter-30.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.gutter-30 > [class^="col-"], .gutter-30 > [class^=" col-"] {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 3.5em;
+  padding-left: 3.5em; }
+  section .container-fluid {
+    padding: 0; }
+  section h1 {
+    font-size: 32px;
+    color: #484f5e;
+    margin-bottom: 20px;
+    transform: scale(1, 1.2);
+    -webkit-transform: scale(1, 1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1, 1.2);
+    /* Firefox */
+    -ms-transform: scale(1, 1.2);
+    /* IE 9+ */
+    -o-transform: scale(1, 1.2);
+    /* Opera */ }
+  section .blog-content h1 {
+    background: #cccc00;
+    color: white;
+    padding: .2em;
+    padding-top: .4em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    transform: scale(1, 1.2);
+    -webkit-transform: scale(1, 1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1, 1.2);
+    /* Firefox */
+    -ms-transform: scale(1, 1.2);
+    /* IE 9+ */
+    -o-transform: scale(1, 1.2);
+    /* Opera */ }
+  section .blog-content p {
+    transform: scale(1, 1.2);
+    -webkit-transform: scale(1, 1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1, 1.2);
+    /* Firefox */
+    -ms-transform: scale(1, 1.2);
+    /* IE 9+ */
+    -o-transform: scale(1, 1.2);
+    /* Opera */
+    margin-bottom: 3em; }

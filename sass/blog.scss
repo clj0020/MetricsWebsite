@@ -1,0 +1,220 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: $rightLeftMargin;
+  padding-left: $rightLeftMargin;
+
+  @include breakpoint(xs) {
+    padding-right: 96px;
+    padding-left: 69px;
+  }
+
+  @include breakpoint(xxs) {
+    padding-right: 90px;
+    padding-left: 45px;
+  }
+
+  @include breakpoint(xxxs) {
+    padding-right: 28px;
+    padding-left: 21px;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-family: Helvetica;
+    color: $secondaryColor;
+    margin-bottom: 20px;
+  }
+
+  .list-group-item {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    border: none;
+    border-top: 1px solid black;
+
+    &:first-child {
+      border: none;
+    }
+
+    [class^="col-"] {
+      padding: 0;
+    }
+
+
+    h3 {
+      color: $secondaryColor;
+      background: $primaryColor;
+      font-size: 30px;
+      font-family: Helvetica;
+      display: inline-block;
+      margin-left: 30px;
+      margin-bottom: 17px;
+      padding-top: .2em;
+      padding-right: .5em;
+      padding-left: .5em;
+
+      @include breakpoint(md){
+          font-size: 26px;
+          margin-bottom: 11px;
+      }
+
+      @include breakpoint(sm){
+          font-size: 22px;
+          margin-bottom: 7px;
+      }
+
+      @include breakpoint(xs){
+          font-size: 27px;
+          margin-bottom: 9px;
+          margin-left: 0;
+      }
+
+      @include breakpoint(xxs){
+          font-size: 27px;
+          margin-bottom: 9px;
+          margin-left: 0;
+      }
+
+      @include breakpoint(xxxs){
+          font-size: 27px;
+          margin-bottom: 9px;
+          margin-left: 0;
+      }
+    }
+
+    h6 {
+      color: $secondaryColor;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 17px;
+      margin-left: 30px;
+      text-align: justify;
+
+      @include breakpoint(md) {
+        font-size: 14px;
+        margin-bottom: 11px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 12px;
+        margin-bottom: 7px;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 13px;
+        margin-bottom: 8px;
+        margin-left: 0;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 13px;
+        margin-bottom: 8px;
+        margin-left: 0;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 13px;
+        margin-bottom: 8px;
+        margin-left: 0;
+      }
+    }
+
+    p {
+      color: $secondaryColor;
+      font-size: 16px;
+      margin-left: 30px;
+      text-align: justify;
+      display: block; /* or inline-block */
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      overflow: hidden;
+      max-height: 5.4em;
+      line-height: 1.8em;
+
+      @include breakpoint(md) {
+        font-size: 14px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 12px;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 13px;
+        margin-left: 0;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 13px;
+        margin-left: 0;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 13px;
+        margin-left: 0;
+      }
+    }
+
+
+
+    img {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      height: 12em;
+      width: 19em;
+      object-fit: cover;
+      overflow: hidden;
+
+      @include breakpoint(md) {
+        height: 10em;
+        width: 15em;
+      }
+
+      @include breakpoint(sm) {
+        height: 8em;
+        width: 12em;
+      }
+
+      @include breakpoint(xs) {
+        height: 25em;
+        width: 34em;
+      }
+
+      @include breakpoint(xxs) {
+        height: 22em;
+        width: 29em;
+      }
+
+      @include breakpoint(xxxs) {
+        height: 15em;
+        width: 20em;
+      }
+    }
+
+  }
+
+
+
+}

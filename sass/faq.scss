@@ -1,0 +1,245 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+section {
+  padding-top: 5px;
+  padding-bottom: 35px;
+
+
+  .container-fluid {
+    padding-right: $rightLeftMargin;
+    padding-left: $rightLeftMargin;
+
+    @include breakpoint(xs) {
+      padding-right: 64px;
+      padding-left: 68px;
+    }
+
+    @include breakpoint(xxs) {
+      padding-right: 44px;
+      padding-left: 43px;
+    }
+
+    @include breakpoint(xxxs) {
+      padding-right: 18px;
+      padding-left: 20px;
+    }
+
+  }
+
+  [class^="col-"] {
+
+  }
+
+  #faq-first-pic {
+    width: 100%;
+  }
+
+  #faq-changing-culture-title {
+    width: 100%;
+  }
+
+  #class-schedule-chart {
+    width: 100%;
+  }
+
+  #available-in-app-store {
+    // height: 12em;
+    // width: 19em;
+    // object-fit: cover;
+    // overflow: hidden;
+  }
+
+  #new-to-working-out {
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
+  #expect-pic {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  #faq-expect-results {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-family: 'Helvetica';
+    color: $secondaryColor;
+    font-size: 32px;
+
+    @include breakpoint(xs) {
+      font-size: 27px;
+    }
+
+    @include breakpoint(xxs) {
+      font-size: 27px;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 24px;
+    }
+  }
+
+  h2 {
+    font-family: $chunk;
+    background: $primaryColor;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: .5em;
+    padding-bottom: .3em;
+    margin-top: .3em;
+    font-size: 3.5em;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @media (max-width: 804px) {
+      text-align: left;
+    }
+
+    @include breakpoint(md) {
+      font-size: 2.0em;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 1.6em;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1.6em;
+    }
+
+    @include breakpoint(xxs) {
+      font-size: 1.4em;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 1.3em;
+    }
+  }
+
+  p {
+    font-family: Helvetica;
+    line-height: 2.0em;
+    font-size: 1.6em;
+    text-align: justify;
+
+    @include breakpoint(md) {
+      font-size: 1.4em;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 1.2em;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1.1em;
+    }
+
+    @include breakpoint(xxs) {
+      font-size: 1em;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 0.9em;
+    }
+  }
+
+  hr {
+    border-color: black;
+    opacity: 0.1;
+    width: 95%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  #interested-class {
+
+    h4 {
+      // text-align: justify;
+      // height: 1em;
+      //
+      // &:after {
+      //   content: "";
+      //   display: inline-block;
+      //   width: 100%;
+      // }
+    }
+
+    img {
+
+    }
+
+  }
+
+  #injury {
+    h4 {
+      // text-align: justify;
+      // height: 2.5em;
+      // margin-bottom: 0;
+      //
+      // &:after {
+      //   content: "";
+      //   display: inline-block;
+      //   width: 100%;
+      // }
+    }
+
+  }
+
+  .class-schedule-paragraph {
+    text-align: center;
+
+    @media (max-width: 804px) {
+      text-align: left;
+    }
+
+  }
+
+  #new-working-out {
+
+    h4 {
+      text-align: justify;
+    }
+  }
+
+  .bunch-o-questions {
+    background: url('../img/faq-watermark-bg.png') no-repeat center center;
+    background-size:contain;
+
+    h4 {
+      text-align: justify;
+      margin-bottom: 0;
+
+      @media (max-width: 904px) {
+        text-align: center;
+      }
+    }
+
+    p {
+      text-align: justify;
+
+      @media (max-width: 904px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .results-pic {
+    margin-bottom: 3em;
+  }
+
+}

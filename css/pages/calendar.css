@@ -1,0 +1,33 @@
+@font-face {
+  font-family: HelveticaMedium;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-MdEx.otf") format("opentype"); }
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 3.5em;
+  padding-left: 3.5em; }
+
+h1 {
+  font-family: 'HelveticaMedium';
+  color: #484f5e;
+  font-size: 32px;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 1.2);
+  /* Firefox */
+  -ms-transform: scale(1, 1.2);
+  /* IE 9+ */
+  -o-transform: scale(1, 1.2);
+  /* Opera */ }
+
+#calendar {
+  padding: 1.5em; }
+  #calendar .fc-event-time {
+    font-size: 17px;
+    margin-right: .5em; }
+  #calendar .fc-event-title {
+    font-size: 17px; }
+  #calendar .fc-event-description {
+    font-size: 12px; }

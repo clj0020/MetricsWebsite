@@ -1,0 +1,120 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+section {
+    padding-top: 25px;
+    padding-bottom: 35px;
+    padding-right: $rightLeftMargin;
+    padding-left: $rightLeftMargin;
+
+    @include breakpoint(xs) {
+      padding-right: 64px;
+      padding-left: 68px;
+    }
+
+    @include breakpoint(xxs) {
+      padding-right: 44px;
+      padding-left: 43px;
+    }
+
+    @include breakpoint(xxxs) {
+      padding-right: 18px;
+      padding-left: 20px;
+    }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-family: Helvetica;
+    color: $secondaryColor;
+    font-size: 32px;
+  }
+
+  p {
+    color: $secondaryColor;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 25px;
+    text-align: justify;
+  }
+
+  a {
+
+    &:hover{
+      text-decoration: none;
+      background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45)), url("../img/sign-up-group-fitness.png");
+    }
+  }
+
+  .sign-up-pic {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      font-family: HelveticaBoldCondensed;
+    }
+
+  }
+
+  .group-fitness {
+    background: url('../img/sign-up-group-fitness.png') no-repeat center center;
+    background-size:cover;
+
+    &:hover{
+      text-decoration: none;
+      background: linear-gradient(rgba(255,221,0, 0.45), rgba(255,221,0, 0.45)), url("../img/sign-up-group-fitness.png") no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .personal-training {
+    background: url('../img/sign-up-personal-training.png') no-repeat center center;
+    background-size: cover;
+
+    &:hover{
+      text-decoration: none;
+      background: linear-gradient(rgba(255,221,0, 0.45), rgba(255,221,0, 0.45)), url("../img/sign-up-personal-training.png") no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .free-class-sign-up {
+    background: $primaryColor;
+    border: 2px solid $secondaryColor;
+    border-radius: 20px;
+    margin: 2em;
+
+    h1 {
+      color: $secondaryColor;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    h2 {
+      color: $secondaryColor;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  img {
+    margin-bottom: 20px;
+    max-width: 400px
+  }
+
+
+
+}

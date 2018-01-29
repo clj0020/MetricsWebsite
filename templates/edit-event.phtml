@@ -1,0 +1,77 @@
+<?php $event = $data['event'] ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>My Calendar</title>
+
+  <link rel="stylesheet" href="../../../bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../bower_components/periodpicker/jquery.timepicker.min.css">
+  <link rel="stylesheet" href="../../../bower_components/periodpicker/jquery.periodpicker.min.css">
+  <link rel="stylesheet" href="../../../css/edit-event.css" type="text/css">
+
+</head>
+
+<body>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Edit Event</h1>
+          <form method="post" action="">
+            <div class="form-group">
+              <label for="title">Title of Event</label>
+              <input type="text" id="title" class="form-control" value="<?= $event->getTitle() ?>" name="title">
+            </div>
+            <div class="form-group">
+              <label for="description">Description of Event</label>
+              <textarea type="text" class="form-control" id="description" value="<?= $event->getDescription() ?>" name="description" rows="10"><?= $event->getDescription() ?></textarea>
+            </div>
+            <div class="form-group">
+              <input id="periodpickerstart" type="text" value="<?= date('H:i Y/m/d ', strtotime($event->getStart())) ?>)" name="start"/>
+              <input id="periodpickerend" type="text" value="<?= date('H:i Y/m/d ', strtotime($event->getEnd())) ?>)" name="end"/>
+            </div>
+            <input type="submit" class="btn btn-primary" value="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../../bower_components/moment/min/moment.min.js"></script>
+  <script src="../../../bower_components/periodpicker/jquery.timepicker.min.js"></script>
+  <script src="../../../bower_components/periodpicker/jquery.periodpicker.full.min.js"></script>
+  <script>
+  $('#periodpickerstart').periodpicker({
+    norange: true, // use only one value
+    cells: [1, 1], // show only one month
+    useTimepickerLimits: false,
+    timepicker: true, // use timepicker
+    timepickerOptions: {
+      hours: true,
+      minutes: true,
+      seconds: false,
+      ampm: true
+    }
+  });
+  $('#periodpickerend').periodpicker({
+    norange: true, // use only one value
+    cells: [1, 1], // show only one month
+    useTimepickerLimits: false,
+    timepicker: true, // use timepicker
+    timepickerOptions: {
+      hours: true,
+      minutes: true,
+      seconds: false,
+      ampm: true
+    }
+  });
+  </script>
+</body>
+
+</html>

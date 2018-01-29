@@ -1,0 +1,92 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+// @font-face {
+//   font-family: HelveticaMedium;
+//   src: url("../fonts/Helvetica/HelveticaNeueLTStd-Md.otf") format("opentype");
+// }
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: $rightLeftMargin;
+  padding-left: $rightLeftMargin;
+
+  @include breakpoint(xs) {
+    padding-right: 64px;
+    padding-left: 68px;
+  }
+
+  @include breakpoint(xxs) {
+    padding-right: 44px;
+    padding-left: 43px;
+  }
+
+  @include breakpoint(xxxs) {
+    padding-right: 18px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-family: Helvetica;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .crew {
+
+    img {
+      max-width: 230px;
+      height: 230px;
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+      font-family: HelveticaBoldCondensed;
+    }
+
+    p {
+      font-family: Helvetica;
+      width: 65%;
+      text-align: justify;
+      margin: auto;
+    }
+  }
+
+  #join-crew {
+    background: $primaryColor;
+    color: $secondaryColor;
+    padding: .5em;
+    font-size: 26px;
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+
+    .join-crew-text {
+      font-family: Helvetica;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.crew {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+h1 {
+  color: $secondaryColor;
+  font-size: 32px;
+  font-family: HelveticaMedium;
+  margin-bottom: 20px;
+}
+
+@import 'components/_footer.scss';

@@ -1,0 +1,98 @@
+@font-face {
+  font-family: HelveticaMedium;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-MdEx.otf") format("opentype"); }
+
+@font-face {
+  font-family: HelveticaBoldCondensed;
+  src: url("../fonts/Helvetica/HelveticaNeueLTStd-BdCn.otf") format("opentype"); }
+
+body {
+  font-family: 'HelveticaMedium', sans-serif; }
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px; }
+
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px; }
+
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px; }
+
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.gutter-30.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.gutter-30 > [class^="col-"], .gutter-30 > [class^=" col-"] {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 3.5em;
+  padding-left: 3.5em; }
+  section .container-fluid {
+    padding: 0; }
+  section h1 {
+    font-size: 32px;
+    color: #484f5e;
+    margin-bottom: 20px;
+    transform: scale(1, 1.2);
+    -webkit-transform: scale(1, 1.2);
+    /* Safari and Chrome */
+    -moz-transform: scale(1, 1.2);
+    /* Firefox */
+    -ms-transform: scale(1, 1.2);
+    /* IE 9+ */
+    -o-transform: scale(1, 1.2);
+    /* Opera */ }
+  section .list-group-item {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+    section .list-group-item h3 {
+      font-size: 25px;
+      color: #484f5e;
+      margin-bottom: 10px;
+      transform: scale(1, 1.2);
+      -webkit-transform: scale(1, 1.2);
+      /* Safari and Chrome */
+      -moz-transform: scale(1, 1.2);
+      /* Firefox */
+      -ms-transform: scale(1, 1.2);
+      /* IE 9+ */
+      -o-transform: scale(1, 1.2);
+      /* Opera */ }
+    section .list-group-item p {
+      color: #5d5c5c;
+      font-size: 13px;
+      margin-bottom: 2em;
+      transform: scale(1, 1.2);
+      -webkit-transform: scale(1, 1.2);
+      /* Safari and Chrome */
+      -moz-transform: scale(1, 1.2);
+      /* Firefox */
+      -ms-transform: scale(1, 1.2);
+      /* IE 9+ */
+      -o-transform: scale(1, 1.2);
+      /* Opera */ }
+    section .list-group-item img {
+      margin-top: 1em;
+      margin-bottom: 1em; }

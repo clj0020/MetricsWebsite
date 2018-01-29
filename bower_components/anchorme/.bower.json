@@ -1,0 +1,21 @@
+{
+  "name": "anchorme",
+  "version": "0.6.0",
+  "authors": [
+    "Ali Saleem"
+  ],
+  "description": "Javascript function to convert URLs in text to clickable HTML anchor links",
+  "main": "src/anchorme.js",
+  "license": "MIT",
+  "homepage": "https://github.com/alexcorvi/anchorme.js",
+  "_release": "0.6.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.6.0",
+    "commit": "224310c5276412e665ebb9b959231a0043564437"
+  },
+  "_source": "https://github.com/alexcorvi/anchorme.js.git",
+  "_target": "^0.6.0",
+  "_originalSource": "anchorme.js",
+  "_direct": true
+}

@@ -1,0 +1,67 @@
+<?php $data['mostRecentBlog'] = $mostRecentBlog; ?>
+<footer>
+  <div class="container-fluid">
+    <div class="row gutter-10">
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+        <h4>Quick <span>Links</span></h4>
+        <ul>
+          <li><a href="<?= "{$router->pathFor('home')}"; ?>">Home</a></li>
+          <li><a href="<?= "{$router->pathFor('about')}"; ?>">About Us</a></li>
+          <li><a href="<?= "{$router->pathFor('blog')}"; ?>">Blog</a></li>
+          <li><a href="<?= "{$router->pathFor('calendar')}"; ?>">Calendar</a></li>
+          <li><a href="<?= "{$router->pathFor('crew')}"; ?>">Meet the Team</a></li>
+          <li><a href="<?= "{$router->pathFor('faq')}"; ?>">FAQ</a></li>
+          <li><a href="<?= "{$router->pathFor('signup')}"; ?>">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center recent-posts">
+        <h4>Recent <span>Posts</span></h4>
+        <?php if ($mostRecentBlog) {?>
+        <a class="recent-blog" href="<?=$router->pathFor('blog-detail', ['id' => $mostRecentBlog->getId()])?>">
+          <h6><?= $mostRecentBlog->getTitle() ?></h6>
+          <img class="img-responsive" src="<?= $mostRecentBlog->getPictureUrl() ?>">
+        </a>
+        <?php } ?>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center" id="social">
+        <h4>Check Us <span>Out</span></h4>
+        <div class="social-container">
+          <a href="https://www.facebook.com/MetricsFitnessLab/" class="fa-stack fa-lg" style="text-decoration:none; margin-top:0">
+            <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+            <i class="fa  fa-facebook fa-stack-1x  icon-background2"></i>
+          </a>
+          <a href="https://www.instagram.com/metricsfitnesslab/" class="fa-stack fa-lg" style="text-decoration:none">
+            <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+            <i class="fa fa-instagram fa-stack-1x  icon-background2"></i>
+          </a>
+          <a href="https://www.instagram.com/metricsfitnesslab/" class="fa-stack fa-lg" style="text-decoration:none">
+            <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+            <i class="fa fa-snapchat fa-stack-1x  icon-background2"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCmukpdwVBOifAbyHnPMy9DQ" class="fa-stack fa-lg" style="text-decoration:none">
+            <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+            <i class="fa fa-youtube fa-stack-1x  icon-background2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+        <h4>Metrics Fitness <span>Lab</span></h4>
+        <a href="tel:334-740-6442">
+          <p>
+            (334) 740-6442
+          </p>
+        </a>
+        <a href="mailto:metricsfitnesslab@gmail.com">
+          <p>
+            metricsfitnesslab@gmail.com
+          </p>
+        </a>
+        <a href="https://www.google.com/maps/dir//2408+E+University+Dr+%23106,+Auburn,+AL+36830/@32.6293538,-85.4647891,17z/data=!4m16!1m7!3m6!1s0x888cf2c9478a098b:0x1eced0609c69e59a!2s2408+E+University+Dr+%23106,+Auburn,+AL+36830!3b1!8m2!3d32.6293538!4d-85.4626004!4m7!1m0!1m5!1m1!1s0x888cf2c9478a098b:0x1eced0609c69e59a!2m2!1d-85.4626004!2d32.6293538">
+          <p>
+            2408 East University Drive Suite 106, Auburn, AL 36830
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

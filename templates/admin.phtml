@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Metrics Fitness Lab</title>
+
+    <!--build:css css/main.min.css-->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/nav.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/admin.css" type="text/css">
+    <!--endbuild-->
+
+  </head>
+  <body>
+
+    <section>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Admin Panel</h1>
+          </div>
+          <div class="col-lg-6">
+            <a class="pull-right" href="<?=$router->pathFor('home')?>">Go to Main Site</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#homeTab">Home</a></li>
+              <li><a data-toggle="tab" href="#blogTab">Blog</a></li>
+              <li><a data-toggle="tab" href="#calendarTab">Calendar</a></li>
+              <li><a data-toggle="tab" href="#testimonialsTab">Testimonials</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="homeTab" class="tab-pane fade in active">
+                <h3>Home</h3>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h6>Sign Ups</h6>
+                      <ul class="list-group menu-items">
+                        <?php
+                        foreach($data['users'] as $user):
+                          ?>
+                          <li class="list-group-item">
+                                <p><strong>Name: </strong><?= $user->getName() ?></p>
+                                <p><strong>Email: </strong><?= $user->getEmail() ?></p>
+                          </li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="blogTab" class="tab-pane fade">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h3>Blog</h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <a href="<?= $router->pathFor('new-blog') ?>" class="btn btn-primary pull-right new-post-btn">New Blog Post</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <ul class="list-group menu-items">
+                        <?php
+                        foreach($data['blogs'] as $blog):
+                          ?>
+                          <li class="list-group-item">
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <img class="img-responsive" src="<?= $blog->getPictureUrl() ?>">
+                              </div>
+                              <div class="col-lg-9">
+                                <a href="<?=$router->pathFor('edit-blog-post', ['id' => $blog->getId()])?>"><h3><?= $blog->getTitle() ?></h3></a>
+                                <p><em>By <?= $blog->getUsername() ?></em>   |   <?= $blog->getDate() ?></p>
+                                <p><?= $blog->getShortContent() ?></p>
+                              </div>
+                            </div>
+                          </li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="calendarTab" class="tab-pane fade">
+
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Calendar</h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <a href="<?= $router->pathFor('new-event') ?>" class="btn btn-primary pull-right">New Event</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>Click on any event to edit it.</p>
+                      <div id="calendar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="testimonialsTab" class="tab-pane fade">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Testimonials</h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <a href="<?= $router->pathFor('new-testimonial') ?>" class="btn btn-primary pull-right">New Testimonial</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <ul class="list-group menu-items">
+                        <?php
+                        foreach($data['testimonials'] as $testimonial):
+                          ?>
+                          <li class="list-group-item">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <a href="<?=$router->pathFor('edit-testimonial', ['id' => $testimonial->getId()])?>"><h3><?= $testimonial->getAuthorName() ?></h3></a>
+                                <p><?= $testimonial->getContent() ?></p>
+                              </div>
+                            </div>
+                          </li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--build:js /js/main.min.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script>
+    $('a[href="#calendarTab"]').on('shown.bs.tab', function (e) {
+      $('#calendar').fullCalendar('render');
+    });
+    $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        editable: true,
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month, agendaWeek, agendaDay'
+        },
+        events: 'api',
+        eventDataTransform: function(rawEventData) {
+          return {
+            id: rawEventData.id,
+            title: rawEventData.title,
+            description: rawEventData.description,
+            start: rawEventData.start,
+            end: rawEventData.end,
+            url: 'admin/calendar/event/' + rawEventData.id,
+            allDay: false
+          };
+        },
+        aspectRatio: 1
+      });
+    });
+    </script>
+    <!-- endbuild -->
+  </body>
+
+</HTML>

@@ -1,0 +1,179 @@
+<?php $thisPage="Home"; ?>
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Metrics Fitness Lab is a high-intensity group fitness and personal training facility focused on measurable metrics and tangible results based in Auburn, Alabama. ">
+    <meta name="author" content="">
+
+    <title>Metrics Fitness Lab, Auburn AL</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#4e9ab0">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--build:css css/main.min.css-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <!--endbuild-->
+
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <?php include("nav.phtml"); ?>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-pause="hover">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" id="slide-1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-5 lead-elements">
+                <a href="https://itunes.apple.com/us/app/metrics-fitness-lab/id1083132667?mt=8" id="download-app">
+                  Download our app
+                </a>
+                <a href="<?= "{$router->pathFor('signup')}"; ?>" class="text-center" id="try-free">
+                  <h2>Try Us</h2>
+                  <h1>Free!</h1>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="section-1">
+      <div class="container-fluid changing-culture">
+        <div class="row text-center">
+          <div class="col-lg-5 col-md-5 vcenter">
+            <a href="<?= "{$router->pathFor('signup')}"; ?>">
+              <img class="img-responsive" src="img/two-free-classes.png" />
+            </a>
+          </div><!--
+          --><div class="col-lg-7 col-md-7 text-left vcenter">
+          <h1>Changing the Culture of <span>Fitness</span></h1>
+          <p>
+            The team at Metrics Fitness Lab knows that health and fitness should be measured and monitored using
+            a variety of related metrics, which is where our name comes from. By being not only a team of certified
+            trainers but also a center for complete health and fitness, we emphasize the science behind the work you
+            put out in the gym and the diet that you follow. Learn more about how we measure your progress and change
+            the culture of fitness <a href="<?= "{$router->pathFor('about')}"; ?>">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid services-container">
+      <div class="row gutter-30 services-row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="service">
+            <img class="img-responsive" src="img/fitness-class-101.png" />
+            <h4>Group <span>Fitness</span></h4>
+            <hr />
+            <p>
+              Our small group fitness consists of high-intensity workouts with a 1:6 trainer-client ratio, giving
+              you the attention you need at the price and convenience of a group workout.
+            </p>
+            <a href="<?= "{$router->pathFor('signup')}"; ?>" class="btn btn-primary text-center">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="service">
+            <img class="img-responsive" src="img/personal-training.png" />
+            <h4>Personal <span>Training</span></h4>
+            <hr />
+            <p>
+              Enjoy one-on-one sessions with one of our experienced trainers.
+            </p>
+            <a href="<?= "{$router->pathFor('signup')}"; ?>" class="btn btn-primary text-center">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="service">
+            <img class="img-responsive" src="img/the-crew.png" />
+            <h4>The <span>Crew</span></h4>
+            <hr />
+            <p>
+              Meet our team and learn why we love what do.
+            </p>
+            <a href="<?= "{$router->pathFor('crew')}"; ?>" class="btn btn-primary text-center">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facebook">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Check Us Out on Facebook!</h1>
+          <div class="fb-page" data-href="https://www.facebook.com/MetricsFitnessLab"
+          data-tabs="timeline" data-width="500" data-height="500" data-small-header="false"
+          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/MetricsFitnessLab" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/MetricsFitnessLab">Metrics Fitness Lab</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php include("footer.phtml"); ?>
+
+<div class="modal fade" id="popup">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <img class="img-responsive" src="img/modal-image.png" />
+      </div>
+      <div class="modal-footer">
+        <form method="post" id="modal-form">
+          <div class="container-fluid">
+            <div class="row" style="margin-top: 0.3em;">
+              <div class="col-xs-5 col-xs-offset-1">
+                <input required class="form-control" name="name" id="name" type="text" placeholder="Your name.."/>
+              </div>
+              <div class="col-xs-5">
+                <input required class="form-control" name="email" id="email" type="email" placeholder="Your email.."/>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 1em;">
+              <div class="col-xs-12 text-center">
+                <input type="submit" class="btn btn-default" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--build:js /js/main.min.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/homepage.js"></script>
+<!-- endbuild -->
+</body>
+
+</HTML>

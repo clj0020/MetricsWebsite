@@ -1,0 +1,37 @@
+
+
+@font-face {
+  font-family: 'HelveticaBoldCondensed';
+  src: url("../fonts/HelveticaCond/Helvetica-BoldCondensed.ttf");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('../fonts/HelveticaNeue-Light.otf');
+}
+
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("../fonts/Helvetica/Helvetica.ttf");
+}
+
+@font-face {
+	font-family: 'ChunkFive';
+	src: url('../fonts/ChunkFive/ChunkFive-Roman.eot');
+	src: url('../fonts/ChunkFive/ChunkFive-Roman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ChunkFive/ChunkFive-Roman.woff') format('woff'),
+		url('../fonts/ChunkFive/ChunkFive-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+$headerFont: 'HelveticaBoldCondensed';
+$normalFont: 'Helvetica';
+$chunk: 'ChunkFive';
+
+$primaryColor: #ffdd00;
+$secondaryColor: #081413;
+
+$rightLeftMargin: 84px;

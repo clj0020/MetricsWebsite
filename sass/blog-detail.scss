@@ -1,0 +1,134 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: $rightLeftMargin;
+  padding-left: $rightLeftMargin;
+  background: url('../img/watermark-home.png') no-repeat center center;
+  background-size:cover;
+
+  @include breakpoint(xs) {
+    padding-right: 100px;
+    padding-left: 68px;
+  }
+
+  @include breakpoint(xxs) {
+    padding-right: 47px;
+    padding-left: 44px;
+  }
+
+  @include breakpoint(xxxs) {
+    padding-right: 26px;
+    padding-left: 17px;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .blog-image-row {
+
+  }
+
+  h1 {
+    font-size: 32px;
+    color: $secondaryColor;
+    margin-bottom: 20px;
+  }
+
+  img {
+    height: 36em;
+    width: 48em;
+    object-fit: cover;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+      height: 28em;
+      width: 37em;
+    }
+
+    @include breakpoint(sm) {
+      height: 23em;
+      width: 31em;
+    }
+
+    @include breakpoint(xs) {
+      height: 20em;
+      width: 27em;
+    }
+
+    @include breakpoint(xxs) {
+      height: 20em;
+      width: 27em;
+    }
+
+    @include breakpoint(xxxs) {
+      height: 15em;
+      width: 21em;
+    }
+
+  }
+
+  .blog-content {
+
+    h1 {
+      background: $primaryColor;
+      text-align: left;
+      color: white;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      padding-top: .5em;
+      padding-bottom: .4em;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      display: inline-block;
+      font-family: Helvetica;
+
+      @include breakpoint(xs) {
+        font-size: 29px;
+        margin-bottom: 10px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      font-family: Helvetica;
+      display: block; /* or inline-block */
+      margin-bottom: 15px;
+      text-align: justify;
+
+      @include breakpoint(xs) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+    }
+
+
+
+  }
+}

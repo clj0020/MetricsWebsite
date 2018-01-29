@@ -1,0 +1,189 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+
+@mixin breakpoint($point) {
+  @if ($point == lg){
+    @media (min-width: 1200px) {
+      @content
+    }
+  }
+  @if ($point == md) {
+    @media (min-width: 992px) and (max-width: 1199px){
+      @content
+    }
+  }
+  @if ($point == sm) {
+    @media (min-width: 768px) and (max-width: 991px){
+      @content
+    }
+  }
+  @if ($point == xs) {
+    @media (max-width: 767px) and (min-width: 641px){
+      @content
+    }
+  }
+  @if ($point == xxs) {
+    @media (max-width: 640px) and (min-width: 481px){
+      @content
+    }
+  }
+  @if ($point == xxxs) {
+    @media (max-width: 480px){
+      @content
+    }
+  }
+}
+
+.navbar {
+  font-family: HelveticaBoldCondensed;
+  background: $secondaryColor;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+
+.container-fluid {
+
+  .navbar-brand {
+    height: 65px;
+    padding: 0px;
+    margin-left: 67px;
+
+      @include breakpoint(sm) {
+        height: 50px;
+      }
+
+      @include breakpoint(xs) {
+        height: 45px;
+      }
+
+      @include breakpoint(xxs) {
+        height: 45px;
+        margin-left: 43px;
+      }
+
+      @include breakpoint(xxxs) {
+        height: 35px;
+        margin-left: 18px;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+        margin-top: 0.4em;
+      }
+
+  }
+
+}
+
+  .navbar-toggle {
+    padding: 10px;
+    margin: 25px 25px 25px 0;
+
+    @include breakpoint(xs) {
+      margin: 15px 25px 15px 0;
+    }
+
+    @include breakpoint(xxs) {
+      margin: 15px 25px 15px 0;
+    }
+
+    @include breakpoint(xxxs) {
+      margin: 8px 15px 8px 0;
+
+      .icon-bar {
+        width: 16px;
+        height: 1px;
+      }
+    }
+
+
+  }
+
+  .navbar-collapse {
+    border: none;
+  }
+
+  .navbar-right {
+    margin-right: -30px;
+
+    @include breakpoint(xxs) {
+      margin-right: -15px;
+    }
+
+    @include breakpoint(xxxs) {
+      margin-right: -15px;
+    }
+
+    #currentpage {
+      background: $primaryColor;
+
+        a {
+            color: $secondaryColor;
+        }
+
+    }
+
+    #sign-up {
+      background: $primaryColor;
+
+      a {
+        font-size: 19px;
+        color: $secondaryColor;
+        margin-bottom: 0;
+        padding-top: 20.5px;
+        padding-bottom: 20.5px;
+        letter-spacing: 2px;
+
+        @include breakpoint(sm) {
+          font-size: 17px;
+          padding-top: 14px;
+          padding-bottom: 13px;
+        }
+      }
+
+      #today {
+        font-size: 22px;
+        letter-spacing: 4px;
+        margin-top: 10px;
+
+        @include breakpoint(sm) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    li {
+      text-align: center;
+      width: 14;
+
+      &:hover {
+        background-color: $primaryColor;
+      }
+
+      a {
+        font-size: 16px;
+        color: white;
+        padding-top: 31px;
+        padding-bottom: 31px;
+
+        @include breakpoint(sm) {
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+
+        @include breakpoint(md) {
+            font-size: 12px;
+        }
+
+        @include breakpoint(sm) {
+          font-size: 10px;
+        }
+
+      }
+    }
+
+  }
+
+}

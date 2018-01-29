@@ -1,0 +1,697 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+@import 'components/_buttons.scss';
+
+.carousel {
+  height: 600px;
+
+  @media (max-width: 2000px) and (min-width: 1200px) {
+    height: 800px;
+  }
+
+  @include breakpoint(xs) {
+    height: 400px;
+  }
+
+  @include breakpoint(xxs) {
+    height: 300px;
+  }
+
+  @include breakpoint(xxxs) {
+    height: 300px;
+  }
+}
+
+.item {
+  height: 600px;
+
+  @media (max-width: 2000px) and (min-width: 1200px) {
+    height: 800px;
+  }
+
+  @include breakpoint(xs) {
+    height: 400px;
+  }
+
+  @include breakpoint(xxs) {
+    height: 300px;
+  }
+
+  @include breakpoint(xxxs) {
+    height: 300px;
+  }
+
+  .lead-elements {
+    height: 600px;
+    position: relative;
+    padding: 0;
+
+    @media (max-width: 2000px) and (min-width: 1200px) {
+      height: 800px;
+    }
+
+    @include breakpoint(xs) {
+      height: 400px;
+    }
+
+    @include breakpoint(xxs) {
+      height: 300px;
+    }
+
+    @include breakpoint(xxxs) {
+      height: 300px;
+    }
+
+    a {
+      position:absolute;
+    }
+
+    #download-app {
+      top: 0;
+      font-family: HelveticaBoldCondensed;
+      background: $primaryColor;
+      color: $secondaryColor;
+      margin-top: 1em;
+      padding: .5em;
+      padding-right: 0.8em;
+      padding-left: 0.7em;
+      font-size: 2em;
+      margin-left: $rightLeftMargin;
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+        transition-delay: 0s;
+      }
+
+      &:active {
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+        transition-delay: 0s;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 1.5em;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 1.4em;
+        margin-left: 67px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 1.2em;
+        margin-left: 45px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: .8em;
+        margin-left: 18px;
+      }
+
+    }
+
+    #try-free {
+      text-transform: uppercase;
+      margin-bottom: 1.5em;
+      bottom: 0;
+      background: rgba(0,0,0, .3);
+      padding-left: 6.1em;
+      color: white;
+
+
+      @include breakpoint(sm) {
+        padding-left: 4.2em;
+      }
+
+      @include breakpoint(xs) {
+        padding-left: 4em;
+      }
+
+      @include breakpoint(xxs) {
+        padding-left: 3.5em;
+      }
+
+      @include breakpoint(xxxs) {
+        padding-left: 1em;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $primaryColor;
+
+        h1 {
+          color: $primaryColor;
+        }
+      }
+
+      h2 {
+        font-family: $chunk;
+        font-size: 54px;
+        margin: 0;
+        line-height: 1;
+        margin-top: 0.3em;
+        margin-right: 0.5em;
+        letter-spacing: 3px;
+
+
+        @include breakpoint(sm) {
+          font-size: 46px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 41px;
+        }
+
+        @include breakpoint(xxs) {
+          font-size: 38px;
+        }
+
+        @include breakpoint(xxxs) {
+          font-size: 29px;
+          margin-right: 0.4em;
+        }
+
+      }
+
+      h1 {
+        font-family: $chunk;
+        font-size: 64px;
+        margin: 0;
+        margin-top: -0.2em;
+        margin-right: 0.3em;
+        letter-spacing: 6px;
+
+        @include breakpoint(sm) {
+          font-size: 54px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 48px;
+        }
+
+        @include breakpoint(xxs) {
+          font-size: 47px;
+        }
+
+        @include breakpoint(xxxs) {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+
+  .slide-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: .5em;
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+#slide-1 {
+  background: url('../img/carousel-1.png') no-repeat center center;
+  background-size:cover;
+
+}
+
+#section-1 {
+  background: $secondaryColor;
+
+  .changing-culture {
+    padding-right: 7em;
+    padding-left: 7em;
+
+
+
+    @include breakpoint(xs) {
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+
+    @include breakpoint(xxs) {
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+
+
+    @include breakpoint(xxxs) {
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+
+    .row {
+    }
+
+    h1 {
+      font-family: HelveticaBoldCondensed;
+      font-size: 34px;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 1em;
+      margin-bottom: 0;
+
+      @include breakpoint(md) {
+        font-size: 27px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 29px;
+        text-align: center;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 29px;
+        text-align: center;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 19px;
+        text-align: center;
+      }
+
+    }
+
+    span {
+      color: $primaryColor;
+      font-family: HelveticaNeueLight;
+    }
+
+    p {
+      font-size: 15px;
+      font-family: Helvetica;
+      color: white;
+      text-align: justify;
+      width: 89%;
+
+      @include breakpoint(md) {
+        font-size: 13px;
+        width: 91%;
+      }
+
+      @include breakpoint(sm) {
+        margin: auto;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 12px;
+        margin: auto;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 12px;
+        margin: auto;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 10px;
+        margin: auto;
+        width: 88%;
+      }
+
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 304px;
+        margin: auto;
+        margin-top: 1em;
+
+        @include breakpoint(md) {
+          max-width: 275px;
+        }
+
+        @include breakpoint(xxxs) {
+          max-width: 230px;
+        }
+
+      }
+    }
+  }
+
+  .services-container {
+    margin-top: 1em;
+    padding: 0;
+
+    .services-row {
+      margin-right: $rightLeftMargin - 15;
+      margin-left: $rightLeftMargin - 15;
+
+      @include breakpoint(sm) {
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      @include breakpoint(xxs) {
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      @include breakpoint(xxxs) {
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      [class^="col-"] {
+
+      }
+
+      .service {
+        padding: 22px 22px;
+        border: 2px solid white;
+        margin-top: 1em;
+        height: 630px;
+        margin-bottom: 30px;
+        position: relative;
+
+        @media (max-width: 1689px) and (min-width: 1521px) {
+          height: 570px;
+        }
+
+        @media (max-width: 1520px) and (min-width: 1281px) {
+          height: 530px;
+        }
+
+
+        @media (max-width: 1280px) and (min-width: 1151px) {
+          height: 500px;
+        }
+
+        @media (max-width: 1150px) and (min-width: 980px) {
+          height: 460px;
+        }
+
+        @media (max-width: 979px) and (min-width: 768px) {
+          height: 450px;
+        }
+
+        @include breakpoint(xs) {
+          height: 640px;
+        }
+
+        @include breakpoint(xxs) {
+          height: 560px;
+        }
+
+        @include breakpoint(xxxs) {
+          height: 460px;
+        }
+
+        &:hover {
+          border: 2px solid $primaryColor;
+        }
+
+        h4 {
+          font-weight: 600;
+          font-size: 18px;
+          color: white;
+          margin-top: 22px;
+          margin-bottom: .5em;
+        }
+
+        span {
+          font-family: HelveticaNeueLight;
+          color: $primaryColor;
+        }
+
+        hr {
+          margin: 0;
+          border-top: 2.5px solid $primaryColor;
+          margin-bottom: 10px;
+          width: 50%;
+        }
+
+        p {
+          font-size: 14px;
+          font-family: Helvetica;
+          color: white;
+          margin-top: 1em;
+
+          @include breakpoint(xxs) {
+            font-size: 12px;
+          }
+
+          @include breakpoint(xxxs) {
+            font-size: 12px;
+          }
+        }
+
+        .btn {
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 1.5em;
+          left: 50%;
+          transform: translateX(-50%);
+
+          @include breakpoint(xxs) {
+            font-size: 12px;
+          }
+
+          @include breakpoint(xxxs) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.facebook {
+  padding-bottom: 2em;
+  background: url('../img/watermark-home.png') no-repeat center center;
+  background-size:cover;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-lg-12 {
+    padding: 0;
+  }
+
+  h1 {
+    background: $secondaryColor;
+    color: white;
+    margin: 0;
+    padding: .5em;
+    margin-top: 30px;
+    margin-left: $rightLeftMargin;
+    margin-right: $rightLeftMargin;
+
+    @include breakpoint(md) {
+      font-size: 25px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 24px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 20px;
+      margin-right: 45px;
+    }
+
+    @include breakpoint(xxs) {
+      font-size: 19px;
+      margin-right: 30px;
+      margin-left: 45px;
+    }
+
+    @include breakpoint(xxxs) {
+      font-size: 18px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .fb-page {
+    margin-top: 30px;
+    margin-left: $rightLeftMargin;
+
+    @include breakpoint(xxs) {
+      margin-left: 45px;
+    }
+
+    @include breakpoint(xxxs) {
+      margin-left: 0;
+    }
+  }
+
+}
+
+#popup {
+
+
+  .modal-dialog {
+    width: 60%;
+
+    @include breakpoint(sm) {
+      width: 80%;
+    }
+
+    @include breakpoint(xs) {
+      width: 80%;
+    }
+
+    @include breakpoint(xxs) {
+      width: 80%;
+    }
+
+    @include breakpoint(xxxs) {
+      width: 80%;
+    }
+  }
+
+  .modal-content {
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .modal-body {
+    background: #000000;
+    padding: 0;
+
+    button {
+      color: $primaryColor;
+      font-size: 32px;
+      opacity: 0.6;
+      margin-right: .4em;
+
+      &:hover {
+        opacity: 1;
+      }
+
+    }
+  }
+
+  .modal-footer {
+    background: $primaryColor;
+    border: none;
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    [class^="col-"] {
+      padding: .2em;
+    }
+
+    .form-control {
+      background: $secondaryColor;
+      color:    $primaryColor;
+      border: none;
+      border-radius: 0;
+
+      @include breakpoint(xs) {
+        font-size: .5em;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: .5em;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: .5em;
+      }
+    }
+
+    input[type="text"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $primaryColor;
+    }
+    input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+      color: $primaryColor;
+    }
+    input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+      color: $primaryColor;
+    }
+    input[type="text"]:-moz-placeholder { /* Firefox 18- */
+      color: $primaryColor;
+    }
+
+    input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $primaryColor;
+    }
+    input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+      color: $primaryColor;
+    }
+    input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+      color: $primaryColor;
+    }
+    input[type="email"]:-moz-placeholder { /* Firefox 18- */
+      color: $primaryColor;
+    }
+
+    .btn-default {
+      background: $secondaryColor;
+      color: $primaryColor;
+      border: none;
+      border-radius: 0;
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+        transition-delay: 0s;
+      }
+
+      &:active {
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+        transition-delay: 0s;
+      }
+
+      @include breakpoint(xs) {
+        font-size: .5em;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: .5em;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: .5em;
+      }
+    }
+  }
+
+}

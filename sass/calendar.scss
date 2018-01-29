@@ -1,0 +1,133 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_mixins.scss';
+@import 'helpers/_helpers.scss';
+@import 'components/_buttons.scss';
+@import 'components/_footer.scss';
+@import 'components/_nav.scss';
+
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: $rightLeftMargin;
+  padding-left: $rightLeftMargin;
+
+  @include breakpoint(xs) {
+    padding-right: 64px;
+    padding-left: 68px;
+  }
+
+  @include breakpoint(xxs) {
+    padding-right: 44px;
+    padding-left: 43px;
+  }
+
+  @include breakpoint(xxxs) {
+    padding-right: 18px;
+    padding-left: 20px;
+  }
+
+
+}
+
+h1 {
+  font-family: Helvetica;
+  color: $secondaryColor;
+  font-size: 32px;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 3em;
+}
+
+
+.calendar-col {
+  padding:0;
+}
+
+#calendar {
+  font-family: Helvetica;
+  margin-bottom: 3em;
+
+  .fc-event {
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: black;
+  }
+
+  .fc-today {
+    background: #d3d3d3;
+  }
+
+  .fc-center {
+
+    h2 {
+
+      @include breakpoint(xs) {
+        font-size: 24px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 18px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 15px;
+      }
+    }
+
+
+  }
+
+  .fc-left {
+
+    button {
+
+      @include breakpoint(xs) {
+        font-size: 13px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 10px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 8px;
+      }
+    }
+
+  }
+
+  .fc-right {
+
+    button {
+
+      @include breakpoint(xs) {
+        font-size: 13px;
+      }
+
+      @include breakpoint(xxs) {
+        font-size: 10px;
+      }
+
+      @include breakpoint(xxxs) {
+        font-size: 8px;
+      }
+    }
+
+  }
+
+  .fc-event-time {
+    font-size: 17px;
+    margin-right: .5em;
+  }
+
+  .fc-event-title {
+    font-size: 17px;
+  }
+
+  .fc-event-description {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,110 @@
+footer {
+  background: #020202;
+  padding: 45px 0;
+  font-family: $headerFont;
+
+  [class^="col-"] {
+    margin-bottom: 3em;
+  }
+
+  h4 {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  span {
+    color: $primaryColor;
+    font-family: HelveticaNeueLight;
+  }
+
+  a {
+
+    p {
+      font-size: 14px;
+      color: white;
+    }
+
+    &:hover {
+
+      text-decoration: none;
+
+      p {
+        color: $primaryColor;
+
+      }
+    }
+
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  li {
+
+    a {
+      color: white;
+      font-weight: normal;
+      font-size: 14px;
+
+      &:hover {
+        color: $primaryColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .recent-posts {
+
+    a {
+
+      h6 {
+        color: white;
+        font-size: 14px;
+      }
+
+      img {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        h6 {
+          color: $primaryColor;
+        }
+      }
+    }
+
+
+  }
+
+  #social {
+    .social-container {
+
+      font-size: 1.2em
+    }
+    .icon-background1 {
+      color: $primaryColor;
+    }
+    .icon-background2 {
+      color: $secondaryColor;
+    }
+    a:hover .icon-background1 {
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px #000;
+    }
+    a:hover .icon-background2 {
+      color: $primaryColor;
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px #000;
+    }
+  }
+}
